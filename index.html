@@ -1,0 +1,71 @@
+<!-- 
+	Petit projet réalisé en quelques heures pour Noël 2022.
+	Le but est de réaliser un système qui permet de voter pour le meilleur pull de Noël.
+	On enregistre les participants puis chacun son tour on vote pour son préféré.
+	On ne peut pas voter pour soi-même.
+	Les photos doivent être ajoutées au dossier img/ en étant nommé NomDuJoueur.png
+	Minimum 3 joueurs. Le vote est obligatoire.
+	Le classement des 3 meilleurs est affiché.
+
+	Maxime Branger - Décembre 2022
+ -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Concours de pull - Noël 2022</title>
+	<link rel="stylesheet" href="style/reset.css">
+	<link rel="stylesheet" href="style/helper.css">
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="style/firework.css">
+</head>
+<body>
+	<div class="before"></div>
+	<div class="after"></div>
+	<section class="landing">
+		<h1>Concours de pull</h1>
+		<h2>Noël 2022</h2>
+		<button id="start">Démarrer</button>
+	</section>
+	<section class="first-section">
+		<h2>Lister les participants</h2>
+		<form class="player-add">
+			<label for="name">Nom du participant </label>
+			<input type="text" id="name">
+	
+			<button>Ajouter le participant</button>
+		</form>
+		<div class="all-players"></div>
+		<button id="run">Lancer les votes</button>
+	</section>
+	<section class="second-section">
+		<div class="announce">
+			<h2>C'est au tour de Player de voter !</h2>
+		</div>
+		<div class="choose-winner"></div>
+		<button id="validate" value="0">Valider mon choix</button>
+	</section>
+	<section class="third-section">
+		<h2>And the winner is...</h2>
+		<div class="podium-div">
+			<div class="podium second" data-content="">
+				2
+				<img src="img/pull.svg" alt="" id="img2">
+			</div>
+			<div class="podium first" data-content="">
+				1
+				<img src="img/pull.svg" alt="" id="img1">
+			</div>
+			<div class="podium third" data-content="">
+				3
+				<img src="img/pull.svg" alt="" id="img3">
+			</div>
+		</div>
+		<button id="reset">Réinitialiser</button>
+	</section>
+	<script src="script/main.js"></script>
+</body>
+</html>
